@@ -1,0 +1,122 @@
+{
+ "info": {
+  "title": "http://trdemo-client",
+  "version": "0.0"
+ },
+ "openapi": "3.0.2",
+ "paths": {
+  "/cart": {
+   "get": {
+    "operationId": "b2206046-3f0b-400c-8f11-f73a6a4472b5",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "text/html": {
+        "example": "<!doctype html>\n<html lang=\"en\">\n<head>\n    <link rel=\"icon\" href=\"/static/favicon.png\"/>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\"/>\n\n    \n\n\n    <link rel=\"stylesheet\" href=\"/static/styles.css\"/>\n    <title> TestR Demo app </title>\n\n    <style>\n        .btn {\n          background-color: DodgerBlue;\n          border: none;\n          color: white;\n          padding: 12px 16px;\n          margin: 10px 10px;\n          font-size: 16px;\n          cursor: pointer;\n        }\n\n    </style>\n</head>\n\n<body>\n\n<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"/\"><img height=\"40\" src=\"/static/logo.png\" alt=\"TestR\"/></a>\n\n    <div class=\"collapse navbar-collapse\">\n        <ul class=\"navbar-nav mr-auto\"> </ul>\n\n        <div>\n            <ul class=\"navbar-nav mr-auto\">\n                \n                    <li class=\"nav-item\"> <a class=\"btn\" href=\"/cart\"><i class=\"fa\"> </i> Show cart </a></li>\n                    <li class=\"nav-item\"> <a style=\"cursor: default\" class=\"btn\" > Alex </a></li>\n                    <li class=\"nav-item\"> <a class=\"btn\" class=\"text-danger\" href=\"/logout\"><i class=\"fa fa-sign-out\"></i> Logout </a>  </li>\n                \n            </ul>\n        </div>\n    </div>\n</nav>\n\n<div class=\"container-fluid\">\n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    <div>\n        <h2>Cart for alex.haiut@testr.io</h2>\n        <table class=\"table table-striped table-responsive-md btn-table\">\n            <thead>\n            <tr>\n                <th>#</th>\n                <th>flight number</th>\n                <th>count</th>\n                <th>action</th>\n            </tr>\n            </thead>\n\n            <tbody>\n            \n                <tr>\n                <td>x</td>\n                <td>\n                    <a href=\"/flight?flight_id=LH-213\">\n                        <i> LH-213 </i>\n                    </a>\n                </td>\n                <td>1</td>\n                <td>\n                    <a href=\"/cart/remove/LH-213\">\n                        <i class=\"fa fa-trash\"> remove </i>\n                    </a>\n                </tr>\n            \n                <tr>\n                <td>x</td>\n                <td>\n                    <a href=\"/flight?flight_id=LY-007\">\n                        <i> LY-007 </i>\n                    </a>\n                </td>\n                <td>1</td>\n                <td>\n                    <a href=\"/cart/remove/LY-007\">\n                        <i class=\"fa fa-trash\"> remove </i>\n                    </a>\n                </tr>\n            \n                <tr>\n                <td>x</td>\n                <td>\n                    <a href=\"/flight?flight_id=LY-011\">\n                        <i> LY-011 </i>\n                    </a>\n                </td>\n                <td>1</td>\n                <td>\n                    <a href=\"/cart/remove/LY-011\">\n                        <i class=\"fa fa-trash\"> remove </i>\n                    </a>\n                </tr>\n            \n                <tr>\n                <td>x</td>\n                <td>\n                    <a href=\"/flight?flight_id=LY-001\">\n                        <i> LY-001 </i>\n                    </a>\n                </td>\n                <td>1</td>\n                <td>\n                    <a href=\"/cart/remove/LY-001\">\n                        <i class=\"fa fa-trash\"> remove </i>\n                    </a>\n                </tr>\n            \n            </tbody>\n        </table>\n\n\n\n    </div>\n\n\n\n\n\n</div>\n\n\n<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>\n<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n\n\n\n\n\n</body>\n</html>"
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 1 requests"
+   },
+   "parameters": []
+  },
+  "/flight": {
+   "get": {
+    "operationId": "ef5f6809-7244-4f36-bdec-cae31d986a0c",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "flight_id",
+      "required": true,
+      "schema": {
+       "enum": [
+        "LY-007",
+        "LY-011"
+       ],
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "text/html": {
+        "example": "<!doctype html>\n<html lang=\"en\">\n<head>\n    <link rel=\"icon\" href=\"/static/favicon.png\"/>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\"/>\n\n    \n\n\n    <link rel=\"stylesheet\" href=\"/static/styles.css\"/>\n    <title> TestR Demo app </title>\n\n    <style>\n        .btn {\n          background-color: DodgerBlue;\n          border: none;\n          color: white;\n          padding: 12px 16px;\n          margin: 10px 10px;\n          font-size: 16px;\n          cursor: pointer;\n        }\n\n    </style>\n</head>\n\n<body>\n\n<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"/\"><img height=\"40\" src=\"/static/logo.png\" alt=\"TestR\"/></a>\n\n    <div class=\"collapse navbar-collapse\">\n        <ul class=\"navbar-nav mr-auto\"> </ul>\n\n        <div>\n            <ul class=\"navbar-nav mr-auto\">\n                \n                    <li class=\"nav-item\"> <a class=\"btn\" href=\"/cart\"><i class=\"fa\"> </i> Show cart </a></li>\n                    <li class=\"nav-item\"> <a style=\"cursor: default\" class=\"btn\" > Alex </a></li>\n                    <li class=\"nav-item\"> <a class=\"btn\" class=\"text-danger\" href=\"/logout\"><i class=\"fa fa-sign-out\"></i> Logout </a>  </li>\n                \n            </ul>\n        </div>\n    </div>\n</nav>\n\n<div class=\"container-fluid\">\n    \n\n<div>\n    <h2>Details for flight LY-007</h2>\n    <div class=\"results\">\n    <p>\n        <p> Flight ID LY-007</p>\n        <p> Airline: LY</p>\n        <p> Flight number: 007</p>\n        <p> Flight Source: TLV</p>\n        <p> Flight Destination: LAX</p>\n        <p> Flight Date: 2021-06-12</p>\n        <p> Flight Time: 17:30</p>\n        <p> Cost: 1500</p>\n        <p> Weekday: 5</p>\n    </p>\n    </div>\n</div>\n\n\n</div>\n\n\n<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>\n<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n\n\n\n\n\n</body>\n</html>"
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 2 requests"
+   },
+   "parameters": []
+  },
+  "/search": {
+   "get": {
+    "operationId": "cd2ffb8a-3045-4efd-95e5-edf799c3f0c1",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "destination",
+      "required": true,
+      "schema": {
+       "enum": [
+        "*"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "endDate",
+      "required": true,
+      "schema": {
+       "enum": [
+        ""
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "source",
+      "required": true,
+      "schema": {
+       "enum": [
+        "*"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "startDate",
+      "required": true,
+      "schema": {
+       "enum": [
+        "2020-02-17"
+       ],
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "text/html": {
+        "example": null
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 1 requests"
+   },
+   "parameters": []
+  }
+ },
+ "tags": []
+}
