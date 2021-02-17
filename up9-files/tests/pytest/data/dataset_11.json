@@ -1,0 +1,18 @@
+{
+ "parameters": [
+  {
+   "name": "param",
+   "uuid": "60a9d71b-d2bd-4ca5-b62b-8006d1c6f2b5"
+  },
+  {
+   "name": "product_id",
+   "uuid": "01f99249-9a64-4c1e-9f04-ef53a0059317"
+  }
+ ],
+ "rows": [
+  {
+   "param": "2020-02-17",
+   "product_id": "*-*"
+  }
+ ]
+}

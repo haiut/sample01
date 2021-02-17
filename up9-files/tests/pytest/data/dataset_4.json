@@ -1,13 +1,13 @@
 {
  "parameters": [
   {
-   "name": "startDate",
-   "uuid": "9bec35f3-f1fd-40dd-bb71-cc0013470521"
+   "name": "flight_id",
+   "uuid": "0dad2604-02a6-4ef5-baa2-0fba18b3f3dc"
   }
  ],
  "rows": [
   {
-   "startDate": "2020-02-17"
+   "flight_id": "LY-007"
   }
  ]
 }

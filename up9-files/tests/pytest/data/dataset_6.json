@@ -1,13 +1,13 @@
 {
  "parameters": [
   {
-   "name": "product_id",
-   "uuid": "164283a6-43aa-4cbb-89aa-b92a0bc61fc1"
+   "name": "user",
+   "uuid": "667606ff-6596-4fd2-990c-aedf68d1e035"
   }
  ],
  "rows": [
   {
-   "product_id": "*-*"
+   "user": "alex.haiut@testr.io"
   }
  ]
 }

@@ -5,34 +5,17 @@
  },
  "openapi": "3.0.2",
  "paths": {
-  "/cart/{param}": {
+  "/cart/{email}": {
    "get": {
-    "operationId": "7ce89d70-61fe-4f9d-8144-dd5a38e25eb1",
+    "operationId": "2f10de5b-b8de-4ffe-a3a9-4afff56d40fb",
     "parameters": [],
     "responses": {
      "200": {
       "content": {
        "application/json": {
         "example": {
-         "products": [
-          {
-           "count": 1,
-           "product_id": "LH-213"
-          },
-          {
-           "count": 1,
-           "product_id": "LY-007"
-          },
-          {
-           "count": 1,
-           "product_id": "LY-011"
-          },
-          {
-           "count": 1,
-           "product_id": "LY-001"
-          }
-         ],
-         "user_id": "alex.haiut@testr.io"
+         "products": [],
+         "user_id": "shahar.yakir@testr.io"
         },
         "schema": {
          "properties": {
@@ -69,16 +52,207 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1 requests"
+    "summary": "Seen 7 requests",
+    "tags": [
+     "cart"
+    ]
    },
    "parameters": [
     {
      "in": "path",
-     "name": "param",
+     "name": "email",
      "required": true,
      "schema": {
       "enum": [
-       "alex.haiut@testr.io"
+       "alex.haiut@testr.io",
+       "shahar.yakir@testr.io",
+       "alon.girmonsky@testr.io"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ],
+   "post": {
+    "operationId": "d970b89a-788c-4438-bd30-2319f638a940",
+    "parameters": [],
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "example": {
+         "products": [],
+         "user_id": "alon.girmonsky@testr.io"
+        },
+        "schema": {
+         "properties": {
+          "products": {
+           "items": {},
+           "type": "array"
+          },
+          "user_id": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "products",
+          "user_id"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "Created"
+     }
+    },
+    "summary": "Seen 1 requests",
+    "tags": [
+     "cart"
+    ]
+   },
+   "put": {
+    "operationId": "a71bff5d-d2d8-49ea-80f6-42193f4817ce",
+    "parameters": [],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "properties": {
+         "count": {
+          "type": "integer"
+         },
+         "product_id": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "count",
+         "product_id"
+        ],
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "example": {
+         "products": [
+          {
+           "count": 1,
+           "product_id": "LY-007"
+          },
+          {
+           "count": 1,
+           "product_id": "LY-057"
+          }
+         ],
+         "user_id": "shahar.yakir@testr.io"
+        },
+        "schema": {
+         "properties": {
+          "products": {
+           "items": {
+            "properties": {
+             "count": {
+              "type": "integer"
+             },
+             "product_id": {
+              "type": "string"
+             }
+            },
+            "required": [
+             "count",
+             "product_id"
+            ],
+            "type": "object"
+           },
+           "type": "array"
+          },
+          "user_id": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "products",
+          "user_id"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "Created"
+     }
+    },
+    "summary": "Seen 2 requests",
+    "tags": [
+     "cart"
+    ]
+   }
+  },
+  "/cart/{email}/{product_id}": {
+   "delete": {
+    "operationId": "c297b6f7-93fc-4aaa-8747-1b994a8faa9e",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "products": [],
+         "user_id": "shahar.yakir@testr.io"
+        },
+        "schema": {
+         "properties": {
+          "products": {
+           "items": {},
+           "type": "array"
+          },
+          "user_id": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "products",
+          "user_id"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 1 requests",
+    "tags": [
+     "cart"
+    ]
+   },
+   "parameters": [
+    {
+     "in": "path",
+     "name": "email",
+     "required": true,
+     "schema": {
+      "enum": [
+       "alex.haiut@testr.io",
+       "shahar.yakir@testr.io",
+       "alon.girmonsky@testr.io"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    },
+    {
+     "in": "path",
+     "name": "product_id",
+     "required": true,
+     "schema": {
+      "enum": [
+       "LH-213"
       ],
       "type": "string"
      },
@@ -87,5 +261,9 @@
    ]
   }
  },
- "tags": []
+ "tags": [
+  {
+   "name": "cart"
+  }
+ ]
 }

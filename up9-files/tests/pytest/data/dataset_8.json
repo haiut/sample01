@@ -1,13 +1,13 @@
 {
  "parameters": [
   {
-   "name": "param",
-   "uuid": "16aa7f59-40da-4cb4-bc72-1bdc3cf4475f"
+   "name": "startDate",
+   "uuid": "930bd8f7-1645-42d6-929a-19e2098f732d"
   }
  ],
  "rows": [
   {
-   "param": "alex.haiut@testr.io"
+   "startDate": "2020-02-17"
   }
  ]
 }

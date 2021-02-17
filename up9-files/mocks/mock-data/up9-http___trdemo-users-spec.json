@@ -5,20 +5,100 @@
  },
  "openapi": "3.0.2",
  "paths": {
-  "/user/{param}": {
+  "/user/all": {
    "get": {
-    "operationId": "dd706ecd-8dc9-47f8-9f8e-23b12ddd95b7",
+    "operationId": "7e116d53-c768-497e-9010-adb294f714a9",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": [
+         {
+          "airport": "TLV",
+          "currency": "ILS",
+          "email": "alex.haiut@testr.io",
+          "firstname": "Alex",
+          "lastname": "Haiut"
+         },
+         {
+          "airport": "SFO",
+          "currency": "USD",
+          "email": "alon.girmonsky@testr.io",
+          "firstname": "Alon",
+          "lastname": "Girmonsky"
+         },
+         {
+          "airport": "TLV",
+          "currency": "ILS",
+          "email": "moishe.zinger@testr.io",
+          "firstname": "Moishe",
+          "lastname": "Zinger"
+         },
+         {
+          "airport": "GLA",
+          "currency": "GBP",
+          "email": "shahar.yakir@testr.io",
+          "firstname": "Shahar",
+          "lastname": "Yakir"
+         }
+        ],
+        "schema": {
+         "items": {
+          "properties": {
+           "airport": {
+            "type": "string"
+           },
+           "currency": {
+            "type": "string"
+           },
+           "email": {
+            "type": "string"
+           },
+           "firstname": {
+            "type": "string"
+           },
+           "lastname": {
+            "type": "string"
+           }
+          },
+          "required": [
+           "airport",
+           "currency",
+           "email",
+           "firstname",
+           "lastname"
+          ],
+          "type": "object"
+         },
+         "type": "array"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 3 requests",
+    "tags": [
+     "user"
+    ]
+   },
+   "parameters": []
+  },
+  "/user/{email}": {
+   "get": {
+    "operationId": "6c5914ce-ff72-492d-a834-c81b0db35714",
     "parameters": [],
     "responses": {
      "200": {
       "content": {
        "application/json": {
         "example": {
-         "airport": "TLV",
-         "currency": "ILS",
-         "email": "alex.haiut@testr.io",
-         "firstname": "Alex",
-         "lastname": "Haiut"
+         "airport": "GLA",
+         "currency": "GBP",
+         "email": "shahar.yakir@testr.io",
+         "firstname": "Shahar",
+         "lastname": "Yakir"
         },
         "schema": {
          "properties": {
@@ -52,16 +132,21 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 6 requests"
+    "summary": "Seen 21 requests",
+    "tags": [
+     "user"
+    ]
    },
    "parameters": [
     {
      "in": "path",
-     "name": "param",
+     "name": "email",
      "required": true,
      "schema": {
       "enum": [
-       "alex.haiut@testr.io"
+       "alex.haiut@testr.io",
+       "shahar.yakir@testr.io",
+       "alon.girmonsky@testr.io"
       ],
       "type": "string"
      },
@@ -70,5 +155,9 @@
    ]
   }
  },
- "tags": []
+ "tags": [
+  {
+   "name": "user"
+  }
+ ]
 }

@@ -7,7 +7,7 @@
  "paths": {
   "/flight/{product_id}": {
    "get": {
-    "operationId": "813cc1ad-0d47-4730-b572-75a05907e109",
+    "operationId": "895997bf-0b9f-45d6-bb63-b3084c5e0131",
     "parameters": [],
     "responses": {
      "200": {
@@ -97,7 +97,7 @@
   },
   "/flight/{product_id}/{param}": {
    "get": {
-    "operationId": "86f969a1-e5d1-4ff3-b72a-2f4dc6572cf0",
+    "operationId": "1c2e4b96-b26b-49f7-904d-15328e4ca894",
     "parameters": [],
     "responses": {
      "200": {
@@ -431,7 +431,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1 requests",
+    "summary": "Seen 2 requests",
     "tags": [
      "flight"
     ]
