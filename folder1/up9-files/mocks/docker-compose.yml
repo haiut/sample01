@@ -1,0 +1,62 @@
+services:
+  trdemo-client:
+    cap_add:
+    - NET_BIND_SERVICE
+    cap_drop:
+    - all
+    command: /config/mockintosh.yml 'http://trdemo-client'
+    environment:
+    - MOCKINTOSH_FORCE_PORT=80
+    hostname: trdemo-client
+    image: testrio/mockintosh:latest
+    ports:
+    - 80
+    read_only: true
+    volumes:
+    - .:/config
+  trdemo-flights:
+    cap_add:
+    - NET_BIND_SERVICE
+    cap_drop:
+    - all
+    command: /config/mockintosh.yml 'http://trdemo-flights'
+    environment:
+    - MOCKINTOSH_FORCE_PORT=80
+    hostname: trdemo-flights
+    image: testrio/mockintosh:latest
+    ports:
+    - 80
+    read_only: true
+    volumes:
+    - .:/config
+  trdemo-shoppingcart:
+    cap_add:
+    - NET_BIND_SERVICE
+    cap_drop:
+    - all
+    command: /config/mockintosh.yml 'http://trdemo-shoppingcart'
+    environment:
+    - MOCKINTOSH_FORCE_PORT=80
+    hostname: trdemo-shoppingcart
+    image: testrio/mockintosh:latest
+    ports:
+    - 80
+    read_only: true
+    volumes:
+    - .:/config
+  trdemo-users:
+    cap_add:
+    - NET_BIND_SERVICE
+    cap_drop:
+    - all
+    command: /config/mockintosh.yml 'http://trdemo-users'
+    environment:
+    - MOCKINTOSH_FORCE_PORT=80
+    hostname: trdemo-users
+    image: testrio/mockintosh:latest
+    ports:
+    - 80
+    read_only: true
+    volumes:
+    - .:/config
+version: '3.3'

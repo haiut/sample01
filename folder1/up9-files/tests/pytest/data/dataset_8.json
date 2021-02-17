@@ -1,0 +1,23 @@
+{
+ "parameters": [
+  {
+   "name": "destination",
+   "uuid": "fb2cb729-c9d8-408e-b612-d439f8e7bab7"
+  },
+  {
+   "name": "source",
+   "uuid": "f8306ef4-aa00-495e-8177-4c924ef9b768"
+  },
+  {
+   "name": "startDate",
+   "uuid": "0f3e126b-8af2-4c99-b157-7ccefc149737"
+  }
+ ],
+ "rows": [
+  {
+   "destination": "BOS",
+   "source": "*",
+   "startDate": "2020-02-17"
+  }
+ ]
+}
