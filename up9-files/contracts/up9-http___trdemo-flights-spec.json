@@ -7,22 +7,22 @@
  "paths": {
   "/flight/{product_id}": {
    "get": {
-    "operationId": "080e731b-a325-4c11-a8e4-3539d889bb03",
+    "operationId": "813cc1ad-0d47-4730-b572-75a05907e109",
     "parameters": [],
     "responses": {
      "200": {
       "content": {
        "application/json": {
         "example": {
-         "airline": "LY",
-         "cost": 1500,
-         "date": "2021-06-12",
-         "destination": "LAX",
-         "flight_id": "LY-007",
-         "flight_number": "007",
-         "source": "TLV",
-         "time": "17:30",
-         "weekday": 5
+         "airline": "LH",
+         "cost": 1800,
+         "date": "2021-07-12",
+         "destination": "BOS",
+         "flight_id": "LH-213",
+         "flight_number": "213",
+         "source": "FRA",
+         "time": "00:00",
+         "weekday": 0
         },
         "schema": {
          "properties": {
@@ -72,7 +72,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 2 requests",
+    "summary": "Seen 3 requests",
     "tags": [
      "flight"
     ]
@@ -86,7 +86,8 @@
       "enum": [
        "*-*",
        "LY-007",
-       "LY-011"
+       "LY-011",
+       "LH-213"
       ],
       "type": "string"
      },
@@ -96,7 +97,7 @@
   },
   "/flight/{product_id}/{param}": {
    "get": {
-    "operationId": "2f8cb291-7e69-467c-8c5c-4593aa7a5c4d",
+    "operationId": "86f969a1-e5d1-4ff3-b72a-2f4dc6572cf0",
     "parameters": [],
     "responses": {
      "200": {
@@ -444,7 +445,8 @@
       "enum": [
        "*-*",
        "LY-007",
-       "LY-011"
+       "LY-011",
+       "LH-213"
       ],
       "type": "string"
      },

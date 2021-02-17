@@ -7,7 +7,7 @@
  "paths": {
   "/user/{param}": {
    "get": {
-    "operationId": "aeb24e0d-9dfc-45ef-b8c4-861f8411b406",
+    "operationId": "dd706ecd-8dc9-47f8-9f8e-23b12ddd95b7",
     "parameters": [],
     "responses": {
      "200": {
@@ -52,7 +52,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 4 requests"
+    "summary": "Seen 6 requests"
    },
    "parameters": [
     {

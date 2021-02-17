@@ -7,7 +7,7 @@
  "paths": {
   "/cart/{param}": {
    "get": {
-    "operationId": "927fa038-4bcd-493f-9246-6e69792c820e",
+    "operationId": "7ce89d70-61fe-4f9d-8144-dd5a38e25eb1",
     "parameters": [],
     "responses": {
      "200": {

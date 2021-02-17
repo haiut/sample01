@@ -17,17 +17,23 @@ services:
   managementRoot: __admin
   oas: '@mock-data/up9-http___trdemo-client-spec.json'
   endpoints:
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_1.html'
+      useTemplating: false
   - path: /cart
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_5.html'
+      body: '@mock-data/resp_2.html'
       useTemplating: false
   - path: /flight
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_6.html'
+      body: '@mock-data/resp_3.html'
       useTemplating: false
   - path: /search
     response:
@@ -43,12 +49,12 @@ services:
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_1.json'
+      body: '@mock-data/resp_5.json'
   - path: /flight/{{product_id}}
     response:
       headers:
         Content-Type: application/json
-      body: '{"airline":"LY","cost":1500,"date":"2021-06-12","destination":"LAX","flight_id":"LY-007","flight_number":"007","source":"TLV","time":"17:30","weekday":5}'
+      body: '{"airline":"LH","cost":1800,"date":"2021-07-12","destination":"BOS","flight_id":"LH-213","flight_number":"213","source":"FRA","time":"00:00","weekday":0}'
       useTemplating: false
 - name: http://trdemo-shoppingcart
   port: 8003
