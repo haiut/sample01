@@ -1,0 +1,164 @@
+{
+ "info": {
+  "title": "http://trdemo-users",
+  "version": "0.0"
+ },
+ "openapi": "3.0.2",
+ "paths": {
+  "/user/all": {
+   "get": {
+    "operationId": "e7129bc7-4a1c-4a7e-925e-847f8b744ccd",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": [
+         {
+          "airport": "TLV",
+          "currency": "ILS",
+          "email": "alex.haiut@testr.io",
+          "firstname": "Alex",
+          "lastname": "Haiut"
+         },
+         {
+          "airport": "SFO",
+          "currency": "USD",
+          "email": "alon.girmonsky@testr.io",
+          "firstname": "Alon",
+          "lastname": "Girmonsky"
+         },
+         {
+          "airport": "TLV",
+          "currency": "ILS",
+          "email": "moishe.zinger@testr.io",
+          "firstname": "Moishe",
+          "lastname": "Zinger"
+         },
+         {
+          "airport": "GLA",
+          "currency": "GBP",
+          "email": "shahar.yakir@testr.io",
+          "firstname": "Shahar",
+          "lastname": "Yakir"
+         }
+        ],
+        "schema": {
+         "items": {
+          "properties": {
+           "airport": {
+            "type": "string"
+           },
+           "currency": {
+            "type": "string"
+           },
+           "email": {
+            "type": "string"
+           },
+           "firstname": {
+            "type": "string"
+           },
+           "lastname": {
+            "type": "string"
+           }
+          },
+          "required": [
+           "airport",
+           "currency",
+           "email",
+           "firstname",
+           "lastname"
+          ],
+          "type": "object"
+         },
+         "type": "array"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 5 requests",
+    "tags": [
+     "user"
+    ]
+   },
+   "parameters": []
+  },
+  "/user/{email}": {
+   "get": {
+    "operationId": "ecb550d2-ffee-4544-a07c-54f5f1a9aba5",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "airport": "TLV",
+         "currency": "ILS",
+         "email": "moishe.zinger@testr.io",
+         "firstname": "Moishe",
+         "lastname": "Zinger"
+        },
+        "schema": {
+         "properties": {
+          "airport": {
+           "type": "string"
+          },
+          "currency": {
+           "type": "string"
+          },
+          "email": {
+           "type": "string"
+          },
+          "firstname": {
+           "type": "string"
+          },
+          "lastname": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "airport",
+          "currency",
+          "email",
+          "firstname",
+          "lastname"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 50 requests",
+    "tags": [
+     "user"
+    ]
+   },
+   "parameters": [
+    {
+     "in": "path",
+     "name": "email",
+     "required": true,
+     "schema": {
+      "enum": [
+       "alex.haiut@testr.io",
+       "shahar.yakir@testr.io",
+       "alon.girmonsky@testr.io",
+       "moishe.zinger@testr.io"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  }
+ },
+ "tags": [
+  {
+   "name": "user"
+  }
+ ]
+}

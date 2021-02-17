@@ -1,0 +1,13 @@
+{
+ "parameters": [
+  {
+   "name": "email",
+   "uuid": "6b1e2afe-a0af-407b-8208-2793a7944c4b"
+  }
+ ],
+ "rows": [
+  {
+   "email": "alex.haiut@testr.io"
+  }
+ ]
+}

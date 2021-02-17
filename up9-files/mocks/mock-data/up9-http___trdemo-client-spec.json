@@ -1,0 +1,324 @@
+{
+ "info": {
+  "title": "http://trdemo-client",
+  "version": "0.0"
+ },
+ "openapi": "3.0.2",
+ "paths": {
+  "/": {
+   "get": {
+    "operationId": "04d8888a-057b-44b6-8625-7462123a61d6",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "text/html": {
+        "example": "<!doctype html>\n<html lang=\"en\">\n<head>\n    <link rel=\"icon\" href=\"/static/favicon.png\"/>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\"/>\n\n    \n\n    <link rel=\"stylesheet\" href=\"/static/styles.css\"/>\n    <title> TestR Demo app </title>\n\n    <style>\n        .btn {\n          background-color: DodgerBlue;\n          border: none;\n          color: white;\n          padding: 12px 16px;\n          margin: 10px 10px;\n          font-size: 16px;\n          cursor: pointer;\n        }\n\n    </style>\n</head>\n\n<body>\n\n<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"/\"><img height=\"40\" src=\"/static/logo.png\" alt=\"TestR\"/></a>\n\n    <div class=\"collapse navbar-collapse\">\n        <ul class=\"navbar-nav mr-auto\"> </ul>\n\n        <div>\n            <ul class=\"navbar-nav mr-auto\">\n                \n                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/login\">Log In</a></li>\n                \n            </ul>\n        </div>\n    </div>\n</nav>\n\n<div class=\"container-fluid\">\n    \n    <div align=\"center\">\n        <h1>Welcome!</h1>\n        \n            Please <a href=\"/login\">sign in</a> to start browsing\n            <br/>\n        \n        You can start see the flights <a href=\"/search\">Here</a>\n    </div>\n    \n</div>\n\n\n<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>\n<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n\n\n\n</body>\n</html>"
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 17 requests"
+   },
+   "parameters": []
+  },
+  "/cart": {
+   "get": {
+    "operationId": "6f5396bf-330c-49f7-9d38-e1b5e61b1eb4",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "text/html": {
+        "example": "<!doctype html>\n<html lang=\"en\">\n<head>\n    <link rel=\"icon\" href=\"/static/favicon.png\"/>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\"/>\n\n    \n\n\n    <link rel=\"stylesheet\" href=\"/static/styles.css\"/>\n    <title> TestR Demo app </title>\n\n    <style>\n        .btn {\n          background-color: DodgerBlue;\n          border: none;\n          color: white;\n          padding: 12px 16px;\n          margin: 10px 10px;\n          font-size: 16px;\n          cursor: pointer;\n        }\n\n    </style>\n</head>\n\n<body>\n\n<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"/\"><img height=\"40\" src=\"/static/logo.png\" alt=\"TestR\"/></a>\n\n    <div class=\"collapse navbar-collapse\">\n        <ul class=\"navbar-nav mr-auto\"> </ul>\n\n        <div>\n            <ul class=\"navbar-nav mr-auto\">\n                \n                    <li class=\"nav-item\"> <a class=\"btn\" href=\"/cart\"><i class=\"fa\"> </i> Show cart </a></li>\n                    <li class=\"nav-item\"> <a style=\"cursor: default\" class=\"btn\" > Alon </a></li>\n                    <li class=\"nav-item\"> <a class=\"btn\" class=\"text-danger\" href=\"/logout\"><i class=\"fa fa-sign-out\"></i> Logout </a>  </li>\n                \n            </ul>\n        </div>\n    </div>\n</nav>\n\n<div class=\"container-fluid\">\n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    <div>\n        <h2>Cart for alon.girmonsky@testr.io</h2>\n        <table class=\"table table-striped table-responsive-md btn-table\">\n            <thead>\n            <tr>\n                <th>#</th>\n                <th>flight number</th>\n                <th>count</th>\n                <th>action</th>\n            </tr>\n            </thead>\n\n            <tbody>\n            \n                <tr>\n                <td>x</td>\n                <td>\n                    <a href=\"/flight?flight_id=BA-457\">\n                        <i> BA-457 </i>\n                    </a>\n                </td>\n                <td>1</td>\n                <td>\n                    <a href=\"/cart/remove/BA-457\">\n                        <i class=\"fa fa-trash\"> remove </i>\n                    </a>\n                </tr>\n            \n                <tr>\n                <td>x</td>\n                <td>\n                    <a href=\"/flight?flight_id=BA-413\">\n                        <i> BA-413 </i>\n                    </a>\n                </td>\n                <td>1</td>\n                <td>\n                    <a href=\"/cart/remove/BA-413\">\n                        <i class=\"fa fa-trash\"> remove </i>\n                    </a>\n                </tr>\n            \n            </tbody>\n        </table>\n\n\n\n    </div>\n\n\n\n\n\n</div>\n\n\n<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>\n<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n\n\n\n\n\n</body>\n</html>"
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 17 requests",
+    "tags": [
+     "cart"
+    ]
+   },
+   "parameters": []
+  },
+  "/cart/add": {
+   "get": {
+    "operationId": "1c607859-aba8-4499-8f31-e4a8105ba68f",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "product_id",
+      "required": true,
+      "schema": {
+       "enum": [
+        "LY-007",
+        "LY-057",
+        "BA-457",
+        "BA-413",
+        "TK-113"
+       ],
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "302": {
+      "content": {
+       "text/html": {
+        "example": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to target URL: <a href=\"/cart\">/cart</a>.  If not click the link."
+       }
+      },
+      "description": "Found"
+     }
+    },
+    "summary": "Seen 7 requests",
+    "tags": [
+     "cart"
+    ]
+   },
+   "parameters": []
+  },
+  "/cart/create": {
+   "get": {
+    "operationId": "f7f7c3b0-33db-42ea-8f8e-084e1a1596c5",
+    "parameters": [],
+    "responses": {
+     "302": {
+      "content": {
+       "text/html": {
+        "example": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to target URL: <a href=\"/cart\">/cart</a>.  If not click the link."
+       }
+      },
+      "description": "Found"
+     }
+    },
+    "summary": "Seen 2 requests",
+    "tags": [
+     "cart"
+    ]
+   },
+   "parameters": []
+  },
+  "/cart/remove/{flight_id}": {
+   "get": {
+    "operationId": "55414b49-11d4-4808-a852-813e1939d084",
+    "parameters": [],
+    "responses": {
+     "302": {
+      "content": {
+       "text/html": {
+        "example": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to target URL: <a href=\"/cart\">/cart</a>.  If not click the link."
+       }
+      },
+      "description": "Found"
+     }
+    },
+    "summary": "Seen 1 requests",
+    "tags": [
+     "cart"
+    ]
+   },
+   "parameters": [
+    {
+     "in": "path",
+     "name": "flight_id",
+     "required": true,
+     "schema": {
+      "enum": [
+       "LH-213"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  },
+  "/flight": {
+   "get": {
+    "operationId": "d3c09f42-31c4-4f0d-8f44-2d75c6a49944",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "flight_id",
+      "required": true,
+      "schema": {
+       "enum": [
+        "LY-007",
+        "LY-011",
+        "LH-213",
+        "BA-457",
+        "BA-413"
+       ],
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "text/html": {
+        "example": "<!doctype html>\n<html lang=\"en\">\n<head>\n    <link rel=\"icon\" href=\"/static/favicon.png\"/>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\"/>\n\n    \n\n\n    <link rel=\"stylesheet\" href=\"/static/styles.css\"/>\n    <title> TestR Demo app </title>\n\n    <style>\n        .btn {\n          background-color: DodgerBlue;\n          border: none;\n          color: white;\n          padding: 12px 16px;\n          margin: 10px 10px;\n          font-size: 16px;\n          cursor: pointer;\n        }\n\n    </style>\n</head>\n\n<body>\n\n<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"/\"><img height=\"40\" src=\"/static/logo.png\" alt=\"TestR\"/></a>\n\n    <div class=\"collapse navbar-collapse\">\n        <ul class=\"navbar-nav mr-auto\"> </ul>\n\n        <div>\n            <ul class=\"navbar-nav mr-auto\">\n                \n                    <li class=\"nav-item\"> <a class=\"btn\" href=\"/cart\"><i class=\"fa\"> </i> Show cart </a></li>\n                    <li class=\"nav-item\"> <a style=\"cursor: default\" class=\"btn\" > Moishe </a></li>\n                    <li class=\"nav-item\"> <a class=\"btn\" class=\"text-danger\" href=\"/logout\"><i class=\"fa fa-sign-out\"></i> Logout </a>  </li>\n                \n            </ul>\n        </div>\n    </div>\n</nav>\n\n<div class=\"container-fluid\">\n    \n\n<div>\n    <h2>Details for flight BA-413</h2>\n    <div class=\"results\">\n    <p>\n        <p> Flight ID BA-413</p>\n        <p> Airline: BA</p>\n        <p> Flight number: 413</p>\n        <p> Flight Source: LHR</p>\n        <p> Flight Destination: BOS</p>\n        <p> Flight Date: 2021-08-03</p>\n        <p> Flight Time: 12:45</p>\n        <p> Cost: 1800</p>\n        <p> Weekday: 1</p>\n    </p>\n    </div>\n</div>\n\n\n</div>\n\n\n<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>\n<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n\n\n\n\n\n</body>\n</html>"
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 9 requests"
+   },
+   "parameters": []
+  },
+  "/login": {
+   "get": {
+    "operationId": "23a93d1f-8690-4d42-9ad2-f8d4ab8064b9",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "text/html": {
+        "example": "<!doctype html>\n<html lang=\"en\">\n<head>\n    <link rel=\"icon\" href=\"/static/favicon.png\"/>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\"/>\n\n    \n<style>\n\n    /* sign in FORM */\n    #logreg-forms {\n        width: 412px;\n        margin: 10vh auto;\n        background-color: #f3f3f3;\n        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);\n    }\n\n    #logreg-forms form {\n        width: 100%;\n        max-width: 410px;\n        padding: 15px;\n        margin: auto;\n    }\n\n    #logreg-forms .form-control {\n        position: relative;\n        box-sizing: border-box;\n        height: auto;\n        padding: 10px;\n        font-size: 16px;\n    }\n\n    #logreg-forms .form-control:focus {\n        z-index: 2;\n    }\n\n    #logreg-forms .form-signin input[type=\"text\"] {\n        margin-bottom: -1px;\n        border-bottom-right-radius: 0;\n        border-bottom-left-radius: 0;\n    }\n\n    #logreg-forms .form-signin input[type=\"password\"] {\n        border-top-left-radius: 0;\n        border-top-right-radius: 0;\n    }\n\n    #logreg-forms .social-login {\n        width: 390px;\n        margin: 0 auto;\n        margin-bottom: 14px;\n    }\n\n    #logreg-forms .social-btn {\n        font-weight: 100;\n        color: white;\n        width: 190px;\n        font-size: 0.9rem;\n    }\n\n    #logreg-forms a {\n        display: block;\n        padding-top: 10px;\n        color: lightseagreen;\n    }\n\n    #logreg-form .lines {\n        width: 200px;\n        border: 1px solid red;\n    }\n\n\n    #logreg-forms button[type=\"submit\"] {\n        margin-top: 10px;\n    }\n\n    #logreg-forms .facebook-btn {\n        background-color: #3C589C;\n    }\n\n    #logreg-forms .google-btn {\n        background-color: #DF4B3B;\n    }\n\n    #logreg-forms .form-reset, #logreg-forms .form-signup {\n        display: none;\n    }\n\n    #logreg-forms .form-signup .social-btn {\n        width: 210px;\n    }\n\n    #logreg-forms .form-signup input {\n        margin-bottom: 2px;\n    }\n\n    .form-signup .social-login {\n        width: 210px !important;\n        margin: 0 auto;\n    }\n\n    /* Mobile */\n\n    @media screen and (max-width: 500px) {\n        #logreg-forms {\n            width: 300px;\n        }\n\n        #logreg-forms .social-login {\n            width: 200px;\n            margin: 0 auto;\n            margin-bottom: 10px;\n        }\n\n        #logreg-forms .social-btn {\n            font-size: 1.3rem;\n            font-weight: 100;\n            color: white;\n            width: 200px;\n            height: 56px;\n\n        }\n\n        #logreg-forms .social-btn:nth-child(1) {\n            margin-bottom: 5px;\n        }\n\n        #logreg-forms .social-btn span {\n            display: none;\n        }\n\n        #logreg-forms .facebook-btn:after {\n            content: 'Facebook';\n        }\n\n        #logreg-forms .google-btn:after {\n            content: 'Google+';\n        }\n    }\n</style>\n\n\n    <link rel=\"stylesheet\" href=\"/static/styles.css\"/>\n    <title> TestR Demo app </title>\n\n    <style>\n        .btn {\n          background-color: DodgerBlue;\n          border: none;\n          color: white;\n          padding: 12px 16px;\n          margin: 10px 10px;\n          font-size: 16px;\n          cursor: pointer;\n        }\n\n    </style>\n</head>\n\n<body>\n\n<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"/\"><img height=\"40\" src=\"/static/logo.png\" alt=\"TestR\"/></a>\n\n    <div class=\"collapse navbar-collapse\">\n        <ul class=\"navbar-nav mr-auto\"> </ul>\n\n        <div>\n            <ul class=\"navbar-nav mr-auto\">\n                \n                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/login\">Log In</a></li>\n                \n            </ul>\n        </div>\n    </div>\n</nav>\n\n<div class=\"container-fluid\">\n    \n<div id=\"logreg-forms\">\n\n    \n    \n    \n    \n    \n    \n\n    <h1 class=\"h3 mb-3 font-weight-normal\"> Select user (temp) </h1>\n    <form action=\"/login\" method=\"POST\" id=\"userform\">\n\n    <select class=\"custom-select\" name=\"user\" form=\"userform\">\n          \n          <option value=\"alex.haiut@testr.io\"> alex.haiut@testr.io </option>\n          \n          <option value=\"alon.girmonsky@testr.io\"> alon.girmonsky@testr.io </option>\n          \n          <option value=\"moishe.zinger@testr.io\"> moishe.zinger@testr.io </option>\n          \n          <option value=\"shahar.yakir@testr.io\"> shahar.yakir@testr.io </option>\n          \n    </select>\n    <button class=\"btn btn-success btn-block\" type=\"submit\"><i class=\"fas fa-sign-in-alt\"></i> Sign in </button>\n    </form>\n\n</div>\n\n</div>\n\n\n<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>\n<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n\n\n\n<script>\n    function toggleResetPswd(e) {\n        e.preventDefault();\n        $('#logreg-forms .form-signin').toggle() // display:block or none\n        $('#logreg-forms .form-reset').toggle() // display:block or none\n    }\n\n    function toggleSignUp(e) {\n        e.preventDefault();\n        $('#logreg-forms .form-signin').toggle(); // display:block or none\n        $('#logreg-forms .form-signup').toggle(); // display:block or none\n    }\n\n    $(() => {\n        // Login Register Form\n        $('#logreg-forms #forgot_pswd').click(toggleResetPswd);\n        $('#logreg-forms #cancel_reset').click(toggleResetPswd);\n        $('#logreg-forms #btn-signup').click(toggleSignUp);\n        $('#logreg-forms #cancel_signup').click(toggleSignUp);\n    })\n</script>\n\n</body>\n</html>"
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 5 requests",
+    "tags": [
+     "login"
+    ]
+   },
+   "parameters": [],
+   "post": {
+    "operationId": "2e081f01-88ba-4b8b-84b4-a9dfc00b6263",
+    "parameters": [],
+    "requestBody": {
+     "content": {
+      "application/x-www-form-urlencoded": {
+       "schema": {
+        "properties": {
+         "user": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "user"
+        ],
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "302": {
+      "content": {
+       "text/html": {
+        "example": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to target URL: <a href=\"/\">/</a>.  If not click the link."
+       }
+      },
+      "description": "Found"
+     }
+    },
+    "summary": "Seen 5 requests",
+    "tags": [
+     "login"
+    ]
+   }
+  },
+  "/logout": {
+   "get": {
+    "operationId": "78e6049a-f4ff-4674-8faa-6b6d8f82d49e",
+    "parameters": [],
+    "responses": {
+     "302": {
+      "content": {
+       "text/html": {
+        "example": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to target URL: <a href=\"/\">/</a>.  If not click the link."
+       }
+      },
+      "description": "Found"
+     }
+    },
+    "summary": "Seen 4 requests"
+   },
+   "parameters": []
+  },
+  "/search": {
+   "get": {
+    "operationId": "f10f948c-2a1b-4f21-8377-04f15a022657",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "destination",
+      "required": true,
+      "schema": {
+       "enum": [
+        "BOS",
+        "*",
+        "IST"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "endDate",
+      "required": true,
+      "schema": {
+       "enum": [
+        ""
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "source",
+      "required": true,
+      "schema": {
+       "enum": [
+        "BOS",
+        "*",
+        "IST"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "startDate",
+      "required": true,
+      "schema": {
+       "enum": [
+        "2020-02-17"
+       ],
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "text/html": {
+        "example": null
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 14 requests"
+   },
+   "parameters": []
+  }
+ },
+ "tags": [
+  {
+   "name": "cart"
+  },
+  {
+   "name": "login"
+  }
+ ]
+}

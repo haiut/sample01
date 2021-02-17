@@ -1,0 +1,18 @@
+{
+ "parameters": [
+  {
+   "name": "email",
+   "uuid": "6b1e2afe-a0af-407b-8208-2793a7944c4b"
+  },
+  {
+   "name": "product_id",
+   "uuid": "9626b110-1060-48b6-a435-ba4d902c441f"
+  }
+ ],
+ "rows": [
+  {
+   "email": "alex.haiut@testr.io",
+   "product_id": "LY-007"
+  }
+ ]
+}

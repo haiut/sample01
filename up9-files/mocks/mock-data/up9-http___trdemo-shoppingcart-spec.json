@@ -1,0 +1,280 @@
+{
+ "info": {
+  "title": "http://trdemo-shoppingcart",
+  "version": "0.0"
+ },
+ "openapi": "3.0.2",
+ "paths": {
+  "/cart/{email}": {
+   "get": {
+    "operationId": "1ec3663b-a242-4e52-b715-024a1ce690a4",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "products": [
+          {
+           "count": 1,
+           "product_id": "BA-457"
+          },
+          {
+           "count": 1,
+           "product_id": "BA-413"
+          }
+         ],
+         "user_id": "alon.girmonsky@testr.io"
+        },
+        "schema": {
+         "properties": {
+          "products": {
+           "items": {
+            "properties": {
+             "count": {
+              "type": "integer"
+             },
+             "product_id": {
+              "type": "string"
+             }
+            },
+            "required": [
+             "count",
+             "product_id"
+            ],
+            "type": "object"
+           },
+           "type": "array"
+          },
+          "user_id": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "products",
+          "user_id"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 15 requests",
+    "tags": [
+     "cart"
+    ]
+   },
+   "parameters": [
+    {
+     "in": "path",
+     "name": "email",
+     "required": true,
+     "schema": {
+      "enum": [
+       "alex.haiut@testr.io",
+       "shahar.yakir@testr.io",
+       "alon.girmonsky@testr.io",
+       "moishe.zinger@testr.io"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ],
+   "post": {
+    "operationId": "57f7f79d-6cf5-498e-9835-4deac4141f7d",
+    "parameters": [],
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "example": {
+         "products": [],
+         "user_id": "alon.girmonsky@testr.io"
+        },
+        "schema": {
+         "properties": {
+          "products": {
+           "items": {},
+           "type": "array"
+          },
+          "user_id": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "products",
+          "user_id"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "Created"
+     }
+    },
+    "summary": "Seen 2 requests",
+    "tags": [
+     "cart"
+    ]
+   },
+   "put": {
+    "operationId": "b9faf2a5-3554-4935-9781-dc256ab7b74e",
+    "parameters": [],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "properties": {
+         "count": {
+          "type": "integer"
+         },
+         "product_id": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "count",
+         "product_id"
+        ],
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "example": {
+         "products": [
+          {
+           "count": 1,
+           "product_id": "BA-413"
+          },
+          {
+           "count": 1,
+           "product_id": "TK-113"
+          }
+         ],
+         "user_id": "moishe.zinger@testr.io"
+        },
+        "schema": {
+         "properties": {
+          "products": {
+           "items": {
+            "properties": {
+             "count": {
+              "type": "integer"
+             },
+             "product_id": {
+              "type": "string"
+             }
+            },
+            "required": [
+             "count",
+             "product_id"
+            ],
+            "type": "object"
+           },
+           "type": "array"
+          },
+          "user_id": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "products",
+          "user_id"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "Created"
+     }
+    },
+    "summary": "Seen 7 requests",
+    "tags": [
+     "cart"
+    ]
+   }
+  },
+  "/cart/{email}/{product_id}": {
+   "delete": {
+    "operationId": "38e2e3b4-356e-4523-93eb-97768ba7a429",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "products": [],
+         "user_id": "shahar.yakir@testr.io"
+        },
+        "schema": {
+         "properties": {
+          "products": {
+           "items": {},
+           "type": "array"
+          },
+          "user_id": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "products",
+          "user_id"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 1 requests",
+    "tags": [
+     "cart"
+    ]
+   },
+   "parameters": [
+    {
+     "in": "path",
+     "name": "email",
+     "required": true,
+     "schema": {
+      "enum": [
+       "alex.haiut@testr.io",
+       "shahar.yakir@testr.io",
+       "alon.girmonsky@testr.io",
+       "moishe.zinger@testr.io"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    },
+    {
+     "in": "path",
+     "name": "product_id",
+     "required": true,
+     "schema": {
+      "enum": [
+       "LH-213"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  }
+ },
+ "tags": [
+  {
+   "name": "cart"
+  }
+ ]
+}

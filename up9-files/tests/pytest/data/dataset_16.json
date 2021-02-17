@@ -1,0 +1,18 @@
+{
+ "parameters": [
+  {
+   "name": "email",
+   "uuid": "6b1e2afe-a0af-407b-8208-2793a7944c4b"
+  },
+  {
+   "name": "product_id",
+   "uuid": "3fc6e63e-1c42-439e-b45b-b28db06b3f9b"
+  }
+ ],
+ "rows": [
+  {
+   "email": "alex.haiut@testr.io",
+   "product_id": "LH-213"
+  }
+ ]
+}

@@ -1,0 +1,477 @@
+{
+ "info": {
+  "title": "http://trdemo-flights",
+  "version": "0.0"
+ },
+ "openapi": "3.0.2",
+ "paths": {
+  "/flight/{product_id}": {
+   "get": {
+    "operationId": "4ff3f13a-d2c9-4d63-8480-8abb63f3b977",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "airline": "BA",
+         "cost": 1800,
+         "date": "2021-08-03",
+         "destination": "BOS",
+         "flight_id": "BA-413",
+         "flight_number": "413",
+         "source": "LHR",
+         "time": "12:45",
+         "weekday": 1
+        },
+        "schema": {
+         "properties": {
+          "airline": {
+           "type": "string"
+          },
+          "cost": {
+           "type": "integer"
+          },
+          "date": {
+           "type": "string"
+          },
+          "destination": {
+           "type": "string"
+          },
+          "flight_id": {
+           "type": "string"
+          },
+          "flight_number": {
+           "type": "string"
+          },
+          "source": {
+           "type": "string"
+          },
+          "time": {
+           "type": "string"
+          },
+          "weekday": {
+           "type": "integer"
+          }
+         },
+         "required": [
+          "airline",
+          "cost",
+          "date",
+          "destination",
+          "flight_id",
+          "flight_number",
+          "source",
+          "time",
+          "weekday"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 9 requests",
+    "tags": [
+     "flight"
+    ]
+   },
+   "parameters": [
+    {
+     "in": "path",
+     "name": "product_id",
+     "required": true,
+     "schema": {
+      "enum": [
+       "*-*",
+       "LY-007",
+       "LY-011",
+       "LH-213",
+       "BA-457"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  },
+  "/flight/{product_id}/{param}": {
+   "get": {
+    "operationId": "48aa639d-367a-4f1c-91f1-334d1eeb31d1",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": [
+         {
+          "airline": "LY",
+          "cost": 1500,
+          "date": "2021-05-31",
+          "destination": "JFK",
+          "flight_id": "LY-001",
+          "flight_number": "001",
+          "source": "TLV",
+          "time": "07:30",
+          "weekday": 0
+         },
+         {
+          "airline": "LY",
+          "cost": 1500,
+          "date": "2021-06-12",
+          "destination": "LAX",
+          "flight_id": "LY-007",
+          "flight_number": "007",
+          "source": "TLV",
+          "time": "17:30",
+          "weekday": 5
+         },
+         {
+          "airline": "LY",
+          "cost": 800,
+          "date": "2021-03-06",
+          "destination": "SFO",
+          "flight_id": "LY-011",
+          "flight_number": "011",
+          "source": "TLV",
+          "time": "17:00",
+          "weekday": 5
+         },
+         {
+          "airline": "LY",
+          "cost": 1500,
+          "date": "2021-08-03",
+          "destination": "BOS",
+          "flight_id": "LY-013",
+          "flight_number": "013",
+          "source": "TLV",
+          "time": "05:30",
+          "weekday": 1
+         },
+         {
+          "airline": "LY",
+          "cost": 1100,
+          "date": "2021-04-07",
+          "destination": "FRA",
+          "flight_id": "LY-057",
+          "flight_number": "057",
+          "source": "TLV",
+          "time": "22:00",
+          "weekday": 2
+         },
+         {
+          "airline": "TK",
+          "cost": 400,
+          "date": "2021-04-24",
+          "destination": "JFK",
+          "flight_id": "TK-101",
+          "flight_number": "101",
+          "source": "IST",
+          "time": "02:00",
+          "weekday": 5
+         },
+         {
+          "airline": "TK",
+          "cost": 1700,
+          "date": "2021-04-02",
+          "destination": "LAX",
+          "flight_id": "TK-107",
+          "flight_number": "107",
+          "source": "IST",
+          "time": "07:45",
+          "weekday": 4
+         },
+         {
+          "airline": "TK",
+          "cost": 400,
+          "date": "2021-07-30",
+          "destination": "SFO",
+          "flight_id": "TK-111",
+          "flight_number": "111",
+          "source": "IST",
+          "time": "17:30",
+          "weekday": 4
+         },
+         {
+          "airline": "TK",
+          "cost": 900,
+          "date": "2021-02-23",
+          "destination": "BOS",
+          "flight_id": "TK-113",
+          "flight_number": "113",
+          "source": "IST",
+          "time": "12:30",
+          "weekday": 1
+         },
+         {
+          "airline": "TK",
+          "cost": 1200,
+          "date": "2021-06-03",
+          "destination": "FRA",
+          "flight_id": "TK-157",
+          "flight_number": "157",
+          "source": "IST",
+          "time": "18:00",
+          "weekday": 3
+         },
+         {
+          "airline": "LH",
+          "cost": 1700,
+          "date": "2021-07-18",
+          "destination": "JFK",
+          "flight_id": "LH-201",
+          "flight_number": "201",
+          "source": "FRA",
+          "time": "04:15",
+          "weekday": 6
+         },
+         {
+          "airline": "LH",
+          "cost": 1200,
+          "date": "2021-07-02",
+          "destination": "LAX",
+          "flight_id": "LH-207",
+          "flight_number": "207",
+          "source": "FRA",
+          "time": "03:45",
+          "weekday": 4
+         },
+         {
+          "airline": "LH",
+          "cost": 1100,
+          "date": "2021-07-16",
+          "destination": "SFO",
+          "flight_id": "LH-211",
+          "flight_number": "211",
+          "source": "FRA",
+          "time": "03:45",
+          "weekday": 4
+         },
+         {
+          "airline": "LH",
+          "cost": 1800,
+          "date": "2021-07-12",
+          "destination": "BOS",
+          "flight_id": "LH-213",
+          "flight_number": "213",
+          "source": "FRA",
+          "time": "00:00",
+          "weekday": 0
+         },
+         {
+          "airline": "LH",
+          "cost": 200,
+          "date": "2021-05-03",
+          "destination": "MUC",
+          "flight_id": "LH-257",
+          "flight_number": "257",
+          "source": "FRA",
+          "time": "16:45",
+          "weekday": 0
+         },
+         {
+          "airline": "UA",
+          "cost": 600,
+          "date": "2021-04-16",
+          "destination": "JFK",
+          "flight_id": "UA-301",
+          "flight_number": "301",
+          "source": "DEN",
+          "time": "06:30",
+          "weekday": 4
+         },
+         {
+          "airline": "UA",
+          "cost": 1900,
+          "date": "2021-08-13",
+          "destination": "LAX",
+          "flight_id": "UA-307",
+          "flight_number": "307",
+          "source": "DEN",
+          "time": "14:00",
+          "weekday": 4
+         },
+         {
+          "airline": "UA",
+          "cost": 800,
+          "date": "2021-07-11",
+          "destination": "SFO",
+          "flight_id": "UA-311",
+          "flight_number": "311",
+          "source": "DEN",
+          "time": "00:00",
+          "weekday": 6
+         },
+         {
+          "airline": "UA",
+          "cost": 800,
+          "date": "2021-05-25",
+          "destination": "BOS",
+          "flight_id": "UA-313",
+          "flight_number": "313",
+          "source": "DEN",
+          "time": "05:30",
+          "weekday": 1
+         },
+         {
+          "airline": "UA",
+          "cost": 500,
+          "date": "2021-08-12",
+          "destination": "FRA",
+          "flight_id": "UA-357",
+          "flight_number": "357",
+          "source": "DEN",
+          "time": "19:15",
+          "weekday": 3
+         },
+         {
+          "airline": "BA",
+          "cost": 600,
+          "date": "2021-02-19",
+          "destination": "JFK",
+          "flight_id": "BA-401",
+          "flight_number": "401",
+          "source": "LHR",
+          "time": "04:30",
+          "weekday": 4
+         },
+         {
+          "airline": "BA",
+          "cost": 700,
+          "date": "2021-06-04",
+          "destination": "LAX",
+          "flight_id": "BA-407",
+          "flight_number": "407",
+          "source": "LHR",
+          "time": "04:30",
+          "weekday": 4
+         },
+         {
+          "airline": "BA",
+          "cost": 200,
+          "date": "2021-05-12",
+          "destination": "SFO",
+          "flight_id": "BA-411",
+          "flight_number": "411",
+          "source": "LHR",
+          "time": "14:45",
+          "weekday": 2
+         },
+         {
+          "airline": "BA",
+          "cost": 1100,
+          "date": "2021-04-23",
+          "destination": "BOS",
+          "flight_id": "BA-413",
+          "flight_number": "413",
+          "source": "LHR",
+          "time": "07:30",
+          "weekday": 4
+         },
+         {
+          "airline": "BA",
+          "cost": 1400,
+          "date": "2021-07-07",
+          "destination": "FRA",
+          "flight_id": "BA-457",
+          "flight_number": "457",
+          "source": "LHR",
+          "time": "16:00",
+          "weekday": 2
+         }
+        ],
+        "schema": {
+         "items": {
+          "properties": {
+           "airline": {
+            "type": "string"
+           },
+           "cost": {
+            "type": "integer"
+           },
+           "date": {
+            "type": "string"
+           },
+           "destination": {
+            "type": "string"
+           },
+           "flight_id": {
+            "type": "string"
+           },
+           "flight_number": {
+            "type": "string"
+           },
+           "source": {
+            "type": "string"
+           },
+           "time": {
+            "type": "string"
+           },
+           "weekday": {
+            "type": "integer"
+           }
+          },
+          "required": [
+           "airline",
+           "cost",
+           "date",
+           "destination",
+           "flight_id",
+           "flight_number",
+           "source",
+           "time",
+           "weekday"
+          ],
+          "type": "object"
+         },
+         "type": "array"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 8 requests",
+    "tags": [
+     "flight"
+    ]
+   },
+   "parameters": [
+    {
+     "in": "path",
+     "name": "product_id",
+     "required": true,
+     "schema": {
+      "enum": [
+       "*-*",
+       "LY-007",
+       "LY-011",
+       "LH-213",
+       "BA-457"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    },
+    {
+     "in": "path",
+     "name": "param",
+     "required": true,
+     "schema": {
+      "enum": [
+       "2020-02-17"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  }
+ },
+ "tags": [
+  {
+   "name": "flight"
+  }
+ ]
+}
