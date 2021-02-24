@@ -1,0 +1,804 @@
+{
+ "info": {
+  "title": "http://orders.sock-shop",
+  "version": "0.0"
+ },
+ "openapi": "3.0.2",
+ "paths": {
+  "/orders": {
+   "parameters": [],
+   "post": {
+    "operationId": "501bd5f2-28ab-4127-96d4-098da0cd8372",
+    "parameters": [
+     {
+      "in": "header",
+      "name": "accept",
+      "required": false,
+      "schema": {
+       "enum": [
+        "application/json"
+       ],
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "properties": {
+         "address": {
+          "type": "string"
+         },
+         "card": {
+          "type": "string"
+         },
+         "customer": {
+          "type": "string"
+         },
+         "items": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "address",
+         "card",
+         "customer",
+         "items"
+        ],
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "example": {
+         "address": {
+          "city": "NYC",
+          "country": "USA",
+          "id": null,
+          "number": "7",
+          "postcode": "12345",
+          "street": "Main"
+         },
+         "card": {
+          "ccv": "223",
+          "expires": "04/24",
+          "id": null,
+          "longNum": "4242 4242 4242 4242"
+         },
+         "customer": {
+          "addresses": [],
+          "cards": [],
+          "firstName": "",
+          "id": null,
+          "lastName": "",
+          "username": "alex"
+         },
+         "customerId": "603679a42dc2460001e55e04",
+         "date": "2021-02-24T16:09:46.914+0000",
+         "id": "60367a4a398937000799c443",
+         "items": [
+          {
+           "id": "603679bb0c74b60006e8c504",
+           "itemId": "3395a43e-2d88-40de-b95f-e00e1502085b",
+           "quantity": 3,
+           "unitPrice": 18.0
+          }
+         ],
+         "shipment": {
+          "id": "014c38a9-2246-463b-be49-d97d700a5ef2",
+          "name": "603679a42dc2460001e55e04"
+         },
+         "total": 58.989998
+        },
+        "schema": {
+         "properties": {
+          "address": {
+           "properties": {
+            "city": {
+             "type": "string"
+            },
+            "country": {
+             "type": "string"
+            },
+            "id": {},
+            "number": {
+             "type": "string"
+            },
+            "postcode": {
+             "type": "string"
+            },
+            "street": {
+             "type": "string"
+            }
+           },
+           "required": [
+            "city",
+            "country",
+            "id",
+            "number",
+            "postcode",
+            "street"
+           ],
+           "type": "object"
+          },
+          "card": {
+           "properties": {
+            "ccv": {
+             "type": "string"
+            },
+            "expires": {
+             "type": "string"
+            },
+            "id": {},
+            "longNum": {
+             "type": "string"
+            }
+           },
+           "required": [
+            "ccv",
+            "expires",
+            "id",
+            "longNum"
+           ],
+           "type": "object"
+          },
+          "customer": {
+           "properties": {
+            "addresses": {
+             "items": {},
+             "type": "array"
+            },
+            "cards": {
+             "items": {},
+             "type": "array"
+            },
+            "firstName": {
+             "type": "string"
+            },
+            "id": {},
+            "lastName": {
+             "type": "string"
+            },
+            "username": {
+             "type": "string"
+            }
+           },
+           "required": [
+            "addresses",
+            "cards",
+            "firstName",
+            "id",
+            "lastName",
+            "username"
+           ],
+           "type": "object"
+          },
+          "customerId": {
+           "type": "string"
+          },
+          "date": {
+           "type": "string"
+          },
+          "id": {
+           "type": "string"
+          },
+          "items": {
+           "items": {
+            "properties": {
+             "id": {
+              "type": "string"
+             },
+             "itemId": {
+              "type": "string"
+             },
+             "quantity": {
+              "type": "integer"
+             },
+             "unitPrice": {
+              "type": "number"
+             }
+            },
+            "required": [
+             "id",
+             "itemId",
+             "quantity",
+             "unitPrice"
+            ],
+            "type": "object"
+           },
+           "type": "array"
+          },
+          "shipment": {
+           "properties": {
+            "id": {
+             "type": "string"
+            },
+            "name": {
+             "type": "string"
+            }
+           },
+           "required": [
+            "id",
+            "name"
+           ],
+           "type": "object"
+          },
+          "total": {
+           "type": "number"
+          }
+         },
+         "required": [
+          "address",
+          "card",
+          "customer",
+          "customerId",
+          "date",
+          "id",
+          "items",
+          "shipment",
+          "total"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "Created"
+     }
+    },
+    "summary": "Seen 1 requests",
+    "tags": [
+     "orders"
+    ]
+   }
+  },
+  "/orders/search/customerId": {
+   "get": {
+    "operationId": "8985521f-3ded-4df8-9e91-c60a3ae9c696",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "custId",
+      "required": true,
+      "schema": {
+       "enum": [
+        "603679a42dc2460001e55e04"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "sort",
+      "required": true,
+      "schema": {
+       "enum": [
+        "date"
+       ],
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "_embedded": {
+          "customerOrders": [
+           {
+            "_links": {
+             "order": {
+              "href": "http://orders/orders/60367a4a398937000799c443"
+             },
+             "self": {
+              "href": "http://orders/orders/60367a4a398937000799c443"
+             }
+            },
+            "address": {
+             "city": "NYC",
+             "country": "USA",
+             "number": "7",
+             "postcode": "12345",
+             "street": "Main"
+            },
+            "card": {
+             "ccv": "223",
+             "expires": "04/24",
+             "longNum": "4242 4242 4242 4242"
+            },
+            "customer": {
+             "addresses": [],
+             "cards": [],
+             "firstName": "",
+             "lastName": "",
+             "username": "alex"
+            },
+            "customerId": "603679a42dc2460001e55e04",
+            "date": "2021-02-24T16:09:46.914+0000",
+            "items": [
+             {
+              "itemId": "3395a43e-2d88-40de-b95f-e00e1502085b",
+              "quantity": 3,
+              "unitPrice": 18.0
+             }
+            ],
+            "shipment": {
+             "name": "603679a42dc2460001e55e04"
+            },
+            "total": 58.989998
+           }
+          ]
+         },
+         "_links": {
+          "self": {
+           "href": "http://orders/orders/search/customerId?sort=date&custId=603679a42dc2460001e55e04"
+          }
+         }
+        },
+        "schema": {
+         "properties": {
+          "_embedded": {
+           "properties": {
+            "customerOrders": {
+             "items": {
+              "properties": {
+               "_links": {
+                "properties": {
+                 "order": {
+                  "properties": {
+                   "href": {
+                    "type": "string"
+                   }
+                  },
+                  "required": [
+                   "href"
+                  ],
+                  "type": "object"
+                 },
+                 "self": {
+                  "properties": {
+                   "href": {
+                    "type": "string"
+                   }
+                  },
+                  "required": [
+                   "href"
+                  ],
+                  "type": "object"
+                 }
+                },
+                "required": [
+                 "order",
+                 "self"
+                ],
+                "type": "object"
+               },
+               "address": {
+                "properties": {
+                 "city": {
+                  "type": "string"
+                 },
+                 "country": {
+                  "type": "string"
+                 },
+                 "number": {
+                  "type": "string"
+                 },
+                 "postcode": {
+                  "type": "string"
+                 },
+                 "street": {
+                  "type": "string"
+                 }
+                },
+                "required": [
+                 "city",
+                 "country",
+                 "number",
+                 "postcode",
+                 "street"
+                ],
+                "type": "object"
+               },
+               "card": {
+                "properties": {
+                 "ccv": {
+                  "type": "string"
+                 },
+                 "expires": {
+                  "type": "string"
+                 },
+                 "longNum": {
+                  "type": "string"
+                 }
+                },
+                "required": [
+                 "ccv",
+                 "expires",
+                 "longNum"
+                ],
+                "type": "object"
+               },
+               "customer": {
+                "properties": {
+                 "addresses": {
+                  "items": {},
+                  "type": "array"
+                 },
+                 "cards": {
+                  "items": {},
+                  "type": "array"
+                 },
+                 "firstName": {
+                  "type": "string"
+                 },
+                 "lastName": {
+                  "type": "string"
+                 },
+                 "username": {
+                  "type": "string"
+                 }
+                },
+                "required": [
+                 "addresses",
+                 "cards",
+                 "firstName",
+                 "lastName",
+                 "username"
+                ],
+                "type": "object"
+               },
+               "customerId": {
+                "type": "string"
+               },
+               "date": {
+                "type": "string"
+               },
+               "items": {
+                "items": {
+                 "properties": {
+                  "itemId": {
+                   "type": "string"
+                  },
+                  "quantity": {
+                   "type": "integer"
+                  },
+                  "unitPrice": {
+                   "type": "number"
+                  }
+                 },
+                 "required": [
+                  "itemId",
+                  "quantity",
+                  "unitPrice"
+                 ],
+                 "type": "object"
+                },
+                "type": "array"
+               },
+               "shipment": {
+                "properties": {
+                 "name": {
+                  "type": "string"
+                 }
+                },
+                "required": [
+                 "name"
+                ],
+                "type": "object"
+               },
+               "total": {
+                "type": "number"
+               }
+              },
+              "required": [
+               "_links",
+               "address",
+               "card",
+               "customer",
+               "customerId",
+               "date",
+               "items",
+               "shipment",
+               "total"
+              ],
+              "type": "object"
+             },
+             "type": "array"
+            }
+           },
+           "required": [
+            "customerOrders"
+           ],
+           "type": "object"
+          },
+          "_links": {
+           "properties": {
+            "self": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            }
+           },
+           "required": [
+            "self"
+           ],
+           "type": "object"
+          }
+         },
+         "required": [
+          "_embedded",
+          "_links"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 3 requests",
+    "tags": [
+     "orders"
+    ]
+   },
+   "parameters": []
+  },
+  "/orders/{id}": {
+   "get": {
+    "operationId": "1e434c7b-bbd6-433d-b948-093cb41395cc",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "_links": {
+          "order": {
+           "href": "http://orders/orders/60367a4a398937000799c443"
+          },
+          "self": {
+           "href": "http://orders/orders/60367a4a398937000799c443"
+          }
+         },
+         "address": {
+          "city": "NYC",
+          "country": "USA",
+          "number": "7",
+          "postcode": "12345",
+          "street": "Main"
+         },
+         "card": {
+          "ccv": "223",
+          "expires": "04/24",
+          "longNum": "4242 4242 4242 4242"
+         },
+         "customer": {
+          "addresses": [],
+          "cards": [],
+          "firstName": "",
+          "lastName": "",
+          "username": "alex"
+         },
+         "customerId": "603679a42dc2460001e55e04",
+         "date": "2021-02-24T16:09:46.914+0000",
+         "items": [
+          {
+           "itemId": "3395a43e-2d88-40de-b95f-e00e1502085b",
+           "quantity": 3,
+           "unitPrice": 18.0
+          }
+         ],
+         "shipment": {
+          "name": "603679a42dc2460001e55e04"
+         },
+         "total": 58.989998
+        },
+        "schema": {
+         "properties": {
+          "_links": {
+           "properties": {
+            "order": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            },
+            "self": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            }
+           },
+           "required": [
+            "order",
+            "self"
+           ],
+           "type": "object"
+          },
+          "address": {
+           "properties": {
+            "city": {
+             "type": "string"
+            },
+            "country": {
+             "type": "string"
+            },
+            "number": {
+             "type": "string"
+            },
+            "postcode": {
+             "type": "string"
+            },
+            "street": {
+             "type": "string"
+            }
+           },
+           "required": [
+            "city",
+            "country",
+            "number",
+            "postcode",
+            "street"
+           ],
+           "type": "object"
+          },
+          "card": {
+           "properties": {
+            "ccv": {
+             "type": "string"
+            },
+            "expires": {
+             "type": "string"
+            },
+            "longNum": {
+             "type": "string"
+            }
+           },
+           "required": [
+            "ccv",
+            "expires",
+            "longNum"
+           ],
+           "type": "object"
+          },
+          "customer": {
+           "properties": {
+            "addresses": {
+             "items": {},
+             "type": "array"
+            },
+            "cards": {
+             "items": {},
+             "type": "array"
+            },
+            "firstName": {
+             "type": "string"
+            },
+            "lastName": {
+             "type": "string"
+            },
+            "username": {
+             "type": "string"
+            }
+           },
+           "required": [
+            "addresses",
+            "cards",
+            "firstName",
+            "lastName",
+            "username"
+           ],
+           "type": "object"
+          },
+          "customerId": {
+           "type": "string"
+          },
+          "date": {
+           "type": "string"
+          },
+          "items": {
+           "items": {
+            "properties": {
+             "itemId": {
+              "type": "string"
+             },
+             "quantity": {
+              "type": "integer"
+             },
+             "unitPrice": {
+              "type": "number"
+             }
+            },
+            "required": [
+             "itemId",
+             "quantity",
+             "unitPrice"
+            ],
+            "type": "object"
+           },
+           "type": "array"
+          },
+          "shipment": {
+           "properties": {
+            "name": {
+             "type": "string"
+            }
+           },
+           "required": [
+            "name"
+           ],
+           "type": "object"
+          },
+          "total": {
+           "type": "number"
+          }
+         },
+         "required": [
+          "_links",
+          "address",
+          "card",
+          "customer",
+          "customerId",
+          "date",
+          "items",
+          "shipment",
+          "total"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 1 requests",
+    "tags": [
+     "orders"
+    ]
+   },
+   "parameters": [
+    {
+     "in": "path",
+     "name": "id",
+     "required": true,
+     "schema": {
+      "enum": [
+       "60367a4a398937000799c443"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  }
+ },
+ "tags": [
+  {
+   "name": "orders"
+  }
+ ]
+}

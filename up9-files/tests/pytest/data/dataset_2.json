@@ -1,13 +1,18 @@
 {
  "parameters": [
   {
-   "name": "product_id",
-   "uuid": "5be9be79-6913-4a86-aaa0-952713944c41"
+   "name": "size",
+   "uuid": "dca97765-5aa0-4676-9550-08513f510b47"
+  },
+  {
+   "name": "tags",
+   "uuid": "98df6160-221b-48de-971d-bee810ffd6f7"
   }
  ],
  "rows": [
   {
-   "product_id": "*-*"
+   "size": "5",
+   "tags": "magic"
   }
  ]
 }

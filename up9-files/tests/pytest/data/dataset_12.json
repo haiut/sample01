@@ -1,13 +1,28 @@
 {
  "parameters": [
   {
-   "name": "product_id",
-   "uuid": "01f99249-9a64-4c1e-9f04-ef53a0059317"
+   "name": "id",
+   "uuid": "1fe907de-0a49-4062-a991-39055053d880"
+  },
+  {
+   "name": "itemId",
+   "uuid": "288f91fe-571e-4ce9-8221-ee8217226881"
+  },
+  {
+   "name": "quantity",
+   "uuid": "7f3e7689-b508-4a8d-8d26-1e539f083723"
+  },
+  {
+   "name": "unitPrice",
+   "uuid": "f8dff118-cbe1-4bf5-b473-a3fddd557d34"
   }
  ],
  "rows": [
   {
-   "product_id": "*-*"
+   "id": "-WJgkBNQudjBQyQ5VPpIL58cKCQ0Db-j",
+   "itemId": "03fef6ac-1896-4ce8-bd69-b798f85c6e0b",
+   "quantity": 3,
+   "unitPrice": 99.99
   }
  ]
 }

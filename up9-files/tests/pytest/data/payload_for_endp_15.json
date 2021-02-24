@@ -1,0 +1,8 @@
+{
+ "city": "NYC",
+ "country": "USA",
+ "number": "{{number}}",
+ "postcode": "{{postcode}}",
+ "street": "Main",
+ "userID": "{{userID}}"
+}

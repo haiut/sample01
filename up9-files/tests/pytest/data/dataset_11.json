@@ -1,18 +1,23 @@
 {
  "parameters": [
   {
-   "name": "param",
-   "uuid": "60a9d71b-d2bd-4ca5-b62b-8006d1c6f2b5"
+   "name": "id",
+   "uuid": "1fe907de-0a49-4062-a991-39055053d880"
   },
   {
-   "name": "product_id",
-   "uuid": "01f99249-9a64-4c1e-9f04-ef53a0059317"
+   "name": "itemId",
+   "uuid": "6a0ebb31-77fa-4e16-ac28-4bcad1ba4d91"
+  },
+  {
+   "name": "unitPrice",
+   "uuid": "d8ed5198-ae2b-4388-ab7e-02f3a43d9fd7"
   }
  ],
  "rows": [
   {
-   "param": "2020-02-17",
-   "product_id": "*-*"
+   "id": "-WJgkBNQudjBQyQ5VPpIL58cKCQ0Db-j",
+   "itemId": "03fef6ac-1896-4ce8-bd69-b798f85c6e0b",
+   "unitPrice": 99.99
   }
  ]
 }

@@ -1,18 +1,13 @@
 {
  "parameters": [
   {
-   "name": "param",
-   "uuid": "ec89ca51-cc3b-41cc-acd9-3a7bb99d6eb3"
-  },
-  {
-   "name": "product_id",
-   "uuid": "5be9be79-6913-4a86-aaa0-952713944c41"
+   "name": "id",
+   "uuid": "4fe919e0-a31f-4756-baae-ea7c7eff702c"
   }
  ],
  "rows": [
   {
-   "param": "2020-02-17",
-   "product_id": "*-*"
+   "id": "03fef6ac-1896-4ce8-bd69-b798f85c6e0b"
   }
  ]
 }

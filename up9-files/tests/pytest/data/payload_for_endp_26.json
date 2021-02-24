@@ -1,0 +1,25 @@
+{
+ "address": {
+  "city": "NYC",
+  "country": "USA",
+  "id": null,
+  "number": "{{number}}",
+  "postcode": "{{postcode}}",
+  "street": "Main"
+ },
+ "amount": "{{amount}}",
+ "card": {
+  "ccv": "{{ccv}}",
+  "expires": "{{expires}}",
+  "id": null,
+  "longNum": "{{longNum}}"
+ },
+ "customer": {
+  "addresses": [],
+  "cards": [],
+  "firstName": "",
+  "id": null,
+  "lastName": "",
+  "username": "alex"
+ }
+}

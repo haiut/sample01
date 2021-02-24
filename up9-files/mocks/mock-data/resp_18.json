@@ -1,0 +1,1 @@
+{"_embedded":{"address":[{"street":"Main","number":"7","country":"USA","city":"NYC","postcode":"12345","id":"60367a112dc2460001e55e05","_links":{"address":{"href":"http://user/addresses/60367a112dc2460001e55e05"},"self":{"href":"http://user/addresses/60367a112dc2460001e55e05"}}}]}}

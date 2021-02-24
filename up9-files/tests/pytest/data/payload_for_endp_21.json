@@ -1,0 +1,6 @@
+{
+ "address": "{{address}}",
+ "card": "{{card}}",
+ "customer": "{{customer}}",
+ "items": "{{items}}"
+}

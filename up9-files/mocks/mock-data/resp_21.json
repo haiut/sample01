@@ -1,0 +1,38 @@
+{
+  "id" : "60367a4a398937000799c443",
+  "customerId" : "603679a42dc2460001e55e04",
+  "customer" : {
+    "id" : null,
+    "firstName" : "",
+    "lastName" : "",
+    "username" : "alex",
+    "addresses" : [ ],
+    "cards" : [ ]
+  },
+  "address" : {
+    "id" : null,
+    "number" : "7",
+    "street" : "Main",
+    "city" : "NYC",
+    "postcode" : "12345",
+    "country" : "USA"
+  },
+  "card" : {
+    "id" : null,
+    "longNum" : "4242 4242 4242 4242",
+    "expires" : "04/24",
+    "ccv" : "223"
+  },
+  "items" : [ {
+    "id" : "603679bb0c74b60006e8c504",
+    "itemId" : "3395a43e-2d88-40de-b95f-e00e1502085b",
+    "quantity" : 3,
+    "unitPrice" : 18.0
+  } ],
+  "shipment" : {
+    "id" : "014c38a9-2246-463b-be49-d97d700a5ef2",
+    "name" : "603679a42dc2460001e55e04"
+  },
+  "date" : "2021-02-24T16:09:46.914+0000",
+  "total" : 58.989998
+}

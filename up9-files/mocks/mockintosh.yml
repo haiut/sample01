@@ -11,190 +11,223 @@
 management:
   port: 8000
 services:
-- name: http://trdemo-client
+- name: http://carts.sock-shop
   port: 8001
   ssl: false
   managementRoot: __admin
-  oas: '@mock-data/up9-http___trdemo-client-spec.json'
+  oas: '@mock-data/up9-http___carts.sock-shop-spec.json'
+  endpoints:
+  - path: /carts/{{id}}/items
+    response:
+      headers:
+        Content-Type: application/json
+      body: '[]'
+      useTemplating: false
+  - path: /carts/{{id}}
+    response:
+      status: 202
+    method: delete
+  - path: /carts/{{id}}/items
+    response:
+      status: 201
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "603679b10c74b60006e8c503",
+         "itemId": "{{request.body}}",
+         "quantity": 1,
+         "unitPrice": 99.99
+        }
+    method: post
+  - path: /carts/{{id}}/items
+    response:
+      status: 202
+    method: patch
+  - path: /carts/{{id}}/items/{{itemId}}
+    response:
+      status: 202
+    method: delete
+  - path: /carts/{{id}}/merge
+    response:
+      status: 202
+- name: http://catalogue.sock-shop
+  port: 8002
+  ssl: false
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___catalogue.sock-shop-spec.json'
+  endpoints:
+  - path: /catalogue/{{id}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_1.json'
+  - path: /catalogue
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_2.json'
+  - path: /catalogue/size
+    response:
+      headers:
+        Content-Type: application/json
+      body: '{"size":9,"err":null}'
+      useTemplating: false
+  - path: /tags
+    response:
+      headers:
+        Content-Type: application/json
+      body: '{"tags":["brown","geek","formal","blue","skin","red","action","sport","black","magic","green"],"err":null}'
+      useTemplating: false
+- name: http://front-end.sock-shop
+  port: 8003
+  ssl: false
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___front-end.sock-shop-spec.json'
   endpoints:
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_1.html'
+      body: '@mock-data/resp_3.html'
       useTemplating: false
-  - path: /cart
-    response:
-      headers:
-        Content-Type: text/html
-      body: '@mock-data/resp_2.html'
-      useTemplating: false
-  - path: /cart/remove/{{flight_id}}
-    response:
-      status: 302
-      headers:
-        Content-Type: text/html
-      body: |-
-        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-        <title>Redirecting...</title>
-        <h1>Redirecting...</h1>
-        <p>You should be redirected automatically to target URL: <a href="/cart">/cart</a>.  If not click the link.
-      useTemplating: false
-  - path: /flight
-    response:
-      headers:
-        Content-Type: text/html
-      body: '@mock-data/resp_4.html'
-      useTemplating: false
-  - path: /login
-    response:
-      headers:
-        Content-Type: text/html
-      body: '@mock-data/resp_5.html'
-      useTemplating: false
-  - path: /login
-    response:
-      status: 302
-      headers:
-        Content-Type: text/html
-      body: |-
-        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-        <title>Redirecting...</title>
-        <h1>Redirecting...</h1>
-        <p>You should be redirected automatically to target URL: <a href="/">/</a>.  If not click the link.
-      useTemplating: false
-    method: post
-  - path: /logout
-    response:
-      status: 302
-      headers:
-        Content-Type: text/html
-      body: |-
-        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-        <title>Redirecting...</title>
-        <h1>Redirecting...</h1>
-        <p>You should be redirected automatically to target URL: <a href="/">/</a>.  If not click the link.
-      useTemplating: false
-  - path: /search
-    response:
-      headers:
-        Content-Type: text/html
-  - path: /cart/add
-    response:
-      status: 302
-      headers:
-        Content-Type: text/html
-      body: |-
-        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-        <title>Redirecting...</title>
-        <h1>Redirecting...</h1>
-        <p>You should be redirected automatically to target URL: <a href="/cart">/cart</a>.  If not click the link.
-      useTemplating: false
-  - path: /cart/create
-    response:
-      status: 302
-      headers:
-        Content-Type: text/html
-      body: |-
-        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-        <title>Redirecting...</title>
-        <h1>Redirecting...</h1>
-        <p>You should be redirected automatically to target URL: <a href="/cart">/cart</a>.  If not click the link.
-      useTemplating: false
-- name: http://trdemo-flights
-  port: 8002
-  ssl: false
-  managementRoot: __admin
-  oas: '@mock-data/up9-http___trdemo-flights-spec.json'
-  endpoints:
-  - path: /flight/{{product_id}}/{{param}}
-    response:
-      headers:
-        Content-Type: application/json
-      body: '@mock-data/resp_11.json'
-  - path: /flight/{{product_id}}
-    response:
-      headers:
-        Content-Type: application/json
-      body: '{"airline":"LH","cost":1800,"date":"2021-07-12","destination":"BOS","flight_id":"LH-213","flight_number":"213","source":"FRA","time":"00:00","weekday":0}'
-      useTemplating: false
-- name: http://trdemo-shoppingcart
-  port: 8003
-  ssl: false
-  managementRoot: __admin
-  oas: '@mock-data/up9-http___trdemo-shoppingcart-spec.json'
-  endpoints:
-  - path: /cart/{{email}}
-    response:
-      headers:
-        Content-Type: application/json
-      body: |-
-        {
-         "products": [],
-         "user_id": "{{request.path.[2]}}"
-        }
-  - path: /cart/{{email}}/{{product_id}}
-    response:
-      headers:
-        Content-Type: application/json
-      body: |-
-        {
-         "products": [],
-         "user_id": "{{request.path.[2]}}"
-        }
-    method: delete
-  - path: /cart/{{email}}
-    response:
-      status: 201
-      headers:
-        Content-Type: application/json
-      body: |-
-        {
-         "products": [],
-         "user_id": "{{request.path.[2]}}"
-        }
-    method: post
-  - path: /cart/{{email}}
-    response:
-      status: 201
-      headers:
-        Content-Type: application/json
-      body: |-
-        {
-         "products": [
-          {
-           "count": 1,
-           "product_id": "LY-007"
-          },
-          {
-           "count": 1,
-           "product_id": "LY-057"
-          }
-         ],
-         "user_id": "{{request.path.[2]}}"
-        }
-    method: put
-- name: http://trdemo-users
+- name: http://orders.sock-shop
   port: 8004
   ssl: false
   managementRoot: __admin
-  oas: '@mock-data/up9-http___trdemo-users-spec.json'
+  oas: '@mock-data/up9-http___orders.sock-shop-spec.json'
   endpoints:
-  - path: /user/{{email}}
+  - path: /orders
+    response:
+      status: 201
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_21.json'
+      useTemplating: false
+    method: post
+  - path: /orders/{{id}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_22.json'
+      useTemplating: false
+  - path: /orders/search/customerId
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_23.json'
+      useTemplating: false
+- name: http://payment.sock-shop
+  port: 8005
+  ssl: false
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___payment.sock-shop-spec.json'
+  endpoints:
+  - path: /paymentAuth
+    response:
+      headers:
+        Content-Type: application/json
+      body: '{"authorised":false,"message":"Payment declined: amount exceeds 100.00"}'
+      useTemplating: false
+    method: post
+- name: http://shipping.sock-shop
+  port: 8006
+  ssl: false
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___shipping.sock-shop-spec.json'
+  endpoints:
+  - path: /shipping
+    response:
+      status: 201
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "{{request.body}}",
+         "name": "{{request.body}}"
+        }
+    method: post
+- name: http://user.sock-shop
+  port: 8007
+  ssl: false
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___user.sock-shop-spec.json'
+  endpoints:
+  - path: /addresses
+    response:
+      headers:
+        Content-Type: application/json
+      body: '{"id":"60367a112dc2460001e55e05"}'
+      useTemplating: false
+    method: post
+  - path: /cards
+    response:
+      headers:
+        Content-Type: application/json
+      body: '{"id":"60367a262dc2460001e55e06"}'
+      useTemplating: false
+    method: post
+  - path: /customers/{{id}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_17.json'
+  - path: /customers/{{id}}/addresses
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_18.json'
+      useTemplating: false
+  - path: /customers/{{id}}/cards
+    response:
+      headers:
+        Content-Type: application/json
+      body: '{"_embedded":{"card":[{"longNum":"4242 4242 4242 4242","expires":"04/24","ccv":"223","id":"60367a262dc2460001e55e06","_links":{"card":{"href":"http://user/cards/60367a262dc2460001e55e06"},"self":{"href":"http://user/cards/60367a262dc2460001e55e06"}}}]}}'
+      useTemplating: false
+  - path: /register
+    response:
+      headers:
+        Content-Type: application/json
+      body: '{"id":"603679a42dc2460001e55e04"}'
+      useTemplating: false
+    method: post
+  - path: /addresses/{{addresseId}}
     response:
       headers:
         Content-Type: application/json
       body: |-
         {
-         "airport": "GLA",
-         "currency": "GBP",
-         "email": "{{request.path.[2]}}",
-         "firstname": "Shahar",
-         "lastname": "Yakir"
+         "street": "Main",
+         "number": "7",
+         "country": "USA",
+         "city": "NYC",
+         "postcode": "12345",
+         "id": "{{request.path.[2]}}",
+         "_links": {
+          "address": {
+           "href": "http://user/addresses/60367a112dc2460001e55e05"
+          },
+          "self": {
+           "href": "http://user/addresses/60367a112dc2460001e55e05"
+          }
+         }
         }
-  - path: /user/all
+  - path: /cards/{{cardId}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_14.json'
-      useTemplating: false
+      body: |-
+        {
+         "longNum": "4242 4242 4242 4242",
+         "expires": "04/24",
+         "ccv": "223",
+         "id": "{{request.path.[2]}}",
+         "_links": {
+          "card": {
+           "href": "http://user/cards/60367a262dc2460001e55e06"
+          },
+          "self": {
+           "href": "http://user/cards/60367a262dc2460001e55e06"
+          }
+         }
+        }

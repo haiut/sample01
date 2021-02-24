@@ -1,13 +1,23 @@
 {
  "parameters": [
   {
-   "name": "email",
-   "uuid": "21428de9-aeb2-4434-9849-bcef4f594311"
+   "name": "number",
+   "uuid": "277adcab-68c6-499c-b1f7-348b1997055e"
+  },
+  {
+   "name": "postcode",
+   "uuid": "212574d4-0e88-4f86-bbb6-fb24119e65e6"
+  },
+  {
+   "name": "userID",
+   "uuid": "0b06faf4-6ea1-413a-a93f-de7bbe83d4ba"
   }
  ],
  "rows": [
   {
-   "email": "alex.haiut@testr.io"
+   "number": "7",
+   "postcode": "12345",
+   "userID": "603679a42dc2460001e55e04"
   }
  ]
 }

@@ -1,84 +1,242 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="icon" href="/static/favicon.png"/>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WeaveSocks Demo App">
+    <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz">
+    <meta name="keywords" content="">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>
+        WeaveSocks
+    </title>
 
-    
+    <meta name="keywords" content="">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100'
+          rel='stylesheet' type='text/css'>
+
+    <!-- styles -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+
+    <!-- theme stylesheet -->
+    <link href="css/style.blue.css" rel="stylesheet" id="theme-stylesheet">
+
+    <!-- your stylesheet with modifications -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <script src="js/respond.min.js"></script>
+
+    <link rel="shortcut icon" href="favicon.png">
 
 
-    <link rel="stylesheet" href="/static/styles.css"/>
-    <title> TestR Demo app </title>
-
-    <style>
-        .btn {
-          background-color: DodgerBlue;
-          border: none;
-          color: white;
-          padding: 12px 16px;
-          margin: 10px 10px;
-          font-size: 16px;
-          cursor: pointer;
-        }
-
-    </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/"><img height="40" src="/static/logo.png" alt="TestR"/></a>
+<div id="topbar"></div>
+<div id="navbar"></div>
 
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto"> </ul>
+<div id="all">
 
-        <div>
-            <ul class="navbar-nav mr-auto">
-                
-                    <li class="nav-item"> <a class="btn" href="/cart"><i class="fa"> </i> Show cart </a></li>
-                    <li class="nav-item"> <a style="cursor: default" class="btn" > Alex </a></li>
-                    <li class="nav-item"> <a class="btn" class="text-danger" href="/logout"><i class="fa fa-sign-out"></i> Logout </a>  </li>
-                
-            </ul>
+    <div id="content">
+
+        <div class="container">
+            <div class="col-md-12">
+                <div id="main-slider">
+                    <div class="item">
+                        <a href="detail.html?id=3395a43e-2d88-40de-b95f-e00e1502085b">
+                            <img class="img-responsive" src="img/colourful_socks_banner.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="detail.html?id=zzz4f044-b040-410d-8ead-4de0446aec7e">
+                            <img class="img-responsive" src="img/rugby_socks_banner.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="detail.html?id=03fef6ac-1896-4ce8-bd69-b798f85c6e0b">
+                            <img class="img-responsive" src="img/holy_socks_banner.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- /#main-slider -->
+            </div>
         </div>
+
+        <!-- *** ADVANTAGES HOMEPAGE ***
+_________________________________________________________ -->
+        <div id="advantages">
+
+            <div class="container">
+                <div class="same-height-row">
+                    <div class="col-sm-4">
+                        <div class="box same-height clickable">
+                            <div class="icon"><i class="fa fa-heart"></i>
+                            </div>
+
+                            <h3><a href="#">We love socks!</a></h3>
+                            <p>Fun fact: Socks were invented by woolly mammoths
+                                to keep warm. They died out because stupid
+                                humans had to cut their legs off to get their
+                                socks.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="box same-height clickable">
+                            <div class="icon"><i class="fa fa-tags"></i>
+                            </div>
+
+                            <h3><a href="#">Best prices</a></h3>
+                            <p>We price check our socks with trained monkeys
+                                back at the office.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="box same-height clickable">
+                            <div class="icon"><i class="fa fa-thumbs-up"></i>
+                            </div>
+
+                            <h3><a href="#">100% satisfaction guaranteed</a>
+                            </h3>
+                            <p>Free returns on most items. Hamsters are
+                                non-returnable once spoken to.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /#advantages -->
+
+        <!-- *** ADVANTAGES END *** -->
+
+        <!-- *** HOT PRODUCT SLIDESHOW ***
+_________________________________________________________ -->
+        <div id="hot">
+
+            <div class="box">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h2>Hot this week</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="product-slider" id="hot-slider">
+                </div>
+                <!-- /.product-slider -->
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /#hot -->
+
+        <!-- *** HOT END *** -->
+
     </div>
-</nav>
+    <!-- /#content -->
 
-<div class="container-fluid">
-    
-
-<div>
-    <h2>Details for flight LH-213</h2>
-    <div class="results">
-    <p>
-        <p> Flight ID LH-213</p>
-        <p> Airline: LH</p>
-        <p> Flight number: 213</p>
-        <p> Flight Source: FRA</p>
-        <p> Flight Destination: BOS</p>
-        <p> Flight Date: 2021-07-12</p>
-        <p> Flight Time: 00:00</p>
-        <p> Cost: 1800</p>
-        <p> Weekday: 0</p>
-    </p>
-    </div>
-</div>
-
+    <div id="footer"></div>
 
 </div>
+<!-- /#all -->
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- *** SCRIPTS TO INCLUDE ***
+_________________________________________________________ -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/js.cookie.js"></script>
+<script src="js/client.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/bootstrap-hover-dropdown.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/front.js"></script>
+<script src="js/jquery.query-object.js"></script>
+<script src="js/client.js"></script>
+<script>
 
+    $(document).ready(function () {
+        $.ajaxSetup({
+            contentType: "application/json; charset=utf-8"
+        });
 
+        console.log("Loading components for index.html");
+        $("#topbar").load("topbar.html");
+        $("#navbar").load("navbar.html");
+        $("#footer").load("footer.html");
 
+        $.getJSON('/catalogue', {size: 5}, function (data) {
+            if (data != null) {
+                $.each(data, function (index, element) {
+                    $('#hot-slider').append(
+                            '<div class="item">\
+                            <div class="product">\
+                                <div class="flip-container">\
+                                    <div class="flipper">\
+                                        <div class="front">\
+                                            <a href="detail.html?id=' + element.id + '">\
+                                            <img src="' + element.imageUrl[0] + '" alt="" class="img-responsive">\
+                                        </a>\
+                                    </div>\
+                                    <div class="back">\
+                                        <a href="detail.html?id=' + element.id + '">\
+                                            <img src="' + element.imageUrl[1] + '" alt="" class="img-responsive">\
+                                        </a>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                            <a href="detail.html?id=' + element.id + '" class="invisible">\
+                                <img src="' + element.imageUrl[0] + '" alt="" class="img-responsive">\
+                            </a>\
+                            <div class="text">\
+                                <h3><a href="detail.html?id=' + element.id + '">' + element.name + '</a></h3>\
+                                <p class="price">$' + element.price + '</p>\
+                            </div>\
+                        </div>\
+                    </div>'
+                    );
+                });
+                $('.product-slider').owlCarousel({
+                    navigation: true, // Show next and prev buttons
+                    slideSpeed: 300,
+                    paginationSpeed: 400,
+                    afterInit: function () {
+                        $('.product-slider .item').css('visibility', 'visible');
+                    }
+                });
 
+                $('#main-slider').owlCarousel({
+                    navigation: true, // Show next and prev buttons
+                    slideSpeed: 300,
+                    paginationSpeed: 400,
+                    autoPlay: true,
+                    stopOnHover: true,
+                    singleItem: true,
+                    afterInit: ''
+                });
 
+            }
+        });
+    })
+</script>
 </body>
+
 </html>
